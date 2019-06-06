@@ -267,6 +267,10 @@ project('ooxml') {
     }
 
     japicmp.baseline = 'org.apache.poi:poi-ooxml:' + japicmpversion + '@jar'
+
+    new File("build/ooxml-lite-report.txt").text = """
+    Hack
+    """
 }
 
 project('examples') {

@@ -194,12 +194,13 @@ under the License.
     <property name="main.byte-buddy.url" value="${repository.m2}/maven2/net/bytebuddy/byte-buddy/1.9.3/byte-buddy-1.9.3.jar"/>
     <property name="main.byte-buddy-agent.jar" location="${main.lib}/byte-buddy-agent-1.9.3.jar"/>
     <property name="main.byte-buddy-agent.url" value="${repository.m2}/maven2/net/bytebuddy/byte-buddy-agent/1.9.3/byte-buddy-agent-1.9.3.jar"/>
-    <property name="main.ant.jar" location="${main.lib}/ant-1.10.1.jar"/>
+    <property name="main.ant.jar" location="${main.lib}/ant-1.10.6.jar"/>
     <property name="main.objenesis.jar" location="${main.lib}/objenesis-2.6.jar"/>
     <property name="main.objenesis.url" value="${repository.m2}/maven2/org/objenesis/objenesis/2.6/objenesis-2.6.jar"/>
     <property name="main.ant.url" value="${repository.m2}/maven2/org/apache/ant/ant/1.10.1/ant-1.10.1.jar"/>
-    <property name="main.antlauncher.jar" location="${main.lib}/ant-launcher-1.10.1.jar"/>
-    <property name="main.antlauncher.url" value="${repository.m2}/maven2/org/apache/ant/ant-launcher/1.10.1/ant-launcher-1.10.1.jar"/>
+    <property name="main.antlauncher.jar" location="${main.lib}/ant-launcher-1.10.6.jar"/>
+    <property name="main.antlauncher.url"
+              value="${repository.m2}/maven2/org/apache/ant/ant-launcher/1.10.6/ant-launcher-1.10.6.jar"/>
     <property name="main.commons-collections4.jar" location="${main.lib}/commons-collections4-4.3.jar"/>
     <property name="main.commons-collections4.url"
               value="${repository.m2}/maven2/org/apache/commons/commons-collections4/4.3/commons-collections4-4.3.jar"/>
@@ -1615,9 +1616,9 @@ under the License.
 
     <target name="test-ooxml" depends="compile-main,compile-ooxml,-test-ooxml-check,jacocotask,-ooxml-lite-agent" unless="ooxml.test.notRequired"
             description="test OOXML classes">
-        <ooxml-test-runner classpath="test.ooxml.classpath" type="ooxml"/>
+        <!--<ooxml-test-runner classpath="test.ooxml.classpath" type="ooxml"/>
         <delete file="${ooxml.testokfile}"/>
-        <antcall target="-test-ooxml-write-testfile"/>
+        <antcall target="-test-ooxml-write-testfile"/> -->
     </target>
 
     <target name="-test-ooxml-write-testfile" unless="ooxml.test.failed">
