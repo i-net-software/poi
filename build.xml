@@ -1616,9 +1616,9 @@ under the License.
 
     <target name="test-ooxml" depends="compile-main,compile-ooxml,-test-ooxml-check,jacocotask,-ooxml-lite-agent" unless="ooxml.test.notRequired"
             description="test OOXML classes">
-        <!--<ooxml-test-runner classpath="test.ooxml.classpath" type="ooxml"/>
+        <ooxml-test-runner classpath="test.ooxml.classpath" type="ooxml"/>
         <delete file="${ooxml.testokfile}"/>
-        <antcall target="-test-ooxml-write-testfile"/> -->
+        <antcall target="-test-ooxml-write-testfile"/>
     </target>
 
     <target name="-test-ooxml-write-testfile" unless="ooxml.test.failed">
